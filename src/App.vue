@@ -69,13 +69,11 @@ export default {
     async getDataFromAPI(){
       this.get_api_data = await axios.get('https://dummyjson.com/posts');
       this.posts = this.get_api_data.data.posts;
-      console.log('posts',this.posts)
     },
     async postDataById(postId){
       this.data_by_id = await axios.get(`https://dummyjson.com/posts/${postId}/comments`);
       this.comments = this.data_by_id.data.comments;
       this.flag = true
-      console.log('hi',this.comments)
     },
 
   }
